@@ -15,6 +15,12 @@ they would tell someone today. Verification records the Owner and the date. The
 legacy copy is deleted at verification (not at capture), so that from that
 moment exactly one copy of the SOP exists.
 
+A **Captured** SOP is never surfaced to the person asking, not even with a
+warning attached. Caveats are ignored by someone in a hurry who just wants the
+GL account, so a caveated wrong answer is still a wrong answer that gets acted
+on. Unverified documents are visible only to whoever runs Onboarding, as
+prioritisation signal.
+
 The reasoning is that CompassKB's only real asset is trust. An Admin Staff
 member who is given a wrong procedure once will go back to asking their manager
 and will not return, and a confidently-worded wrong answer about a GL account or

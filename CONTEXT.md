@@ -49,6 +49,16 @@ The workflow that takes a single SOP off the legacy file server, captures what
 its Owner actually does today, and ends with a verified SOP and no legacy copy.
 _Avoid_: migration, import, ingestion
 
+**Knowledge Gap**:
+A question CompassKB could not answer from a Verified SOP, recorded so that
+Onboarding is prioritised by what Admin Staff actually ask.
+_Avoid_: miss, unanswered query, unknown
+
+**Seed Map**:
+The mapping of subject areas to Owners, established before any SOP is Verified,
+which lets CompassKB name who to ask while it still knows nothing.
+_Avoid_: ownership matrix, routing table
+
 ### SOP lifecycle
 
 **Captured**:
@@ -75,6 +85,8 @@ from it says so.
 - Every **SOP** has exactly one **Owner**; an **Owner** holds many **SOPs**
 - An SOP moves **Captured** → **Verified** → **Stale**, and is only answerable
   from **Verified** onwards
+- A **Knowledge Gap** is attributed to an **Owner** via the **Seed Map**
+- **Knowledge Gaps** prioritise which SOP is **Onboarded** next
 
 ## Example dialogue
 
@@ -94,6 +106,12 @@ from it says so.
 >
 > **Domain expert:** "Then it's **Stale**. She still gets the answer, but she
 > gets told it's overdue for review."
+>
+> **Dev:** "And if there's no SOP for it at all?"
+>
+> **Domain expert:** "Then it's a **Knowledge Gap**. She gets told it's Derek's
+> area — the **Seed Map** knows that much — and we log it. Enough people ask,
+> that SOP gets **Onboarded** next."
 
 ## Flagged ambiguities
 
