@@ -39,6 +39,31 @@ Procedural knowledge held by a manager and transmitted verbally, which no
 current SOP correctly records.
 _Avoid_: tribal knowledge, institutional knowledge
 
+**Owner**:
+The manager who is accountable for an SOP being correct, and whose expertise
+Admin Staff would otherwise have consulted directly.
+_Avoid_: author, approver, maintainer, subject matter expert
+
+**Onboarding**:
+The workflow that takes a single SOP off the legacy file server, captures what
+its Owner actually does today, and ends with a verified SOP and no legacy copy.
+_Avoid_: migration, import, ingestion
+
+### SOP lifecycle
+
+**Captured**:
+An SOP that has been taken off the legacy file server but whose Owner has not
+yet confirmed it. CompassKB knows it exists and will not answer from it.
+
+**Verified**:
+An SOP whose Owner has confirmed it describes what they would tell someone
+today. Only Verified SOPs are answerable.
+_Avoid_: approved, published, live
+
+**Stale**:
+A Verified SOP past its review date. Still answerable, but every answer drawn
+from it says so.
+
 ## Relationships
 
 - The **Admin Company** performs administration for every **Operating Company**
@@ -46,10 +71,32 @@ _Avoid_: tribal knowledge, institutional knowledge
   **Operating Companies**
 - An **SOP** describes a task performed by **Admin Staff**
 - Today, **Tacit Knowledge** is trusted by **Admin Staff** and **SOPs** are not
+- **Onboarding** converts one Owner's **Tacit Knowledge** into a **Verified** SOP
+- Every **SOP** has exactly one **Owner**; an **Owner** holds many **SOPs**
+- An SOP moves **Captured** → **Verified** → **Stale**, and is only answerable
+  from **Verified** onwards
+
+## Example dialogue
+
+> **Dev:** "Jane asks how to raise a purchase order for a supplier. We have an
+> SOP for it on the file server — can CompassKB answer?"
+>
+> **Domain expert:** "Not from that. It's **Captured** at best. Nobody's looked
+> at it in years."
+>
+> **Dev:** "So what makes it answerable?"
+>
+> **Domain expert:** "Her manager is the **Owner**. When he's read it and said
+> 'yes, that's what I'd tell her', it's **Verified** — and then we delete the
+> copy on the old server so there's only one."
+>
+> **Dev:** "And if he verified it two years ago?"
+>
+> **Domain expert:** "Then it's **Stale**. She still gets the answer, but she
+> gets told it's overdue for review."
 
 ## Flagged ambiguities
 
-- "SOP" currently refers both to the stale documents on the legacy file server
-  and to the verified procedures CompassKB will serve. These are not the same
-  thing and the difference is the entire point of the onboarding workflow —
-  resolution pending.
+- "SOP" was used to mean both the stale documents on the legacy file server and
+  the verified procedures CompassKB serves — resolved: those are the **Captured**
+  and **Verified** states of the same SOP, and only the latter is answerable.
