@@ -1,0 +1,44 @@
+# Tags are the cross-cutting axis: they cut across categories.
+# A closed vocabulary on purpose -- free-form tags decay into synonyms and
+# stop being useful for retrieval filtering.
+#
+# To add a tag: add it here with a real description, in the same commit as the
+# first article that uses it. The validator rejects unknown tags.
+
+tags:
+  - id: getting-started
+    description: Reader's first contact with the topic.
+  - id: authentication
+    description: Identity, login, tokens, sessions, SSO.
+  - id: permissions
+    description: Roles, scopes, access control decisions.
+  - id: billing
+    description: Plans, invoices, usage, payment.
+  - id: api
+    description: Programmatic interfaces and their contracts.
+  - id: integrations
+    description: Third-party systems connected to the product.
+  - id: data-model
+    description: Entities, relationships, schemas.
+  - id: search
+    description: Indexing, querying, ranking, retrieval behaviour.
+  - id: ingestion
+    description: Getting external content into the knowledge base.
+  - id: security
+    description: Threats, hardening, handling of sensitive material.
+  - id: privacy
+    description: Personal data, retention, regional handling.
+  - id: incident
+    description: Outage and degradation response.
+  - id: migration
+    description: Moving between versions, systems, or formats.
+  - id: troubleshooting
+    description: Diagnosing something that is already broken.
+  - id: configuration
+    description: Settings, flags, environment.
+  - id: reporting
+    description: Dashboards, exports, analytics.
+  - id: onboarding
+    description: Bringing a new person or tenant up to speed.
+  - id: glossary
+    description: Term definitions.

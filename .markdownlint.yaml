@@ -1,0 +1,24 @@
+# Markdown conventions for content/. The Python validator owns front matter,
+# taxonomy and links; this file owns prose formatting only.
+
+default: true
+
+# Articles get their H1 from front matter `title`, so bodies start at H2.
+MD002: false   # first heading need not be H1
+MD041: false   # first line need not be a top-level heading
+MD025: false   # (H1 in body is an error in scripts/validate.py, not here)
+
+# Tables and code samples legitimately run long.
+MD013:
+  line_length: 100
+  tables: false
+  code_blocks: false
+  headings: false
+
+# Duplicate headings are fine across different sections of a long reference page.
+MD024:
+  siblings_only: true
+
+# Allow the few inline HTML elements templates rely on.
+MD033:
+  allowed_elements: [br, details, summary, kbd]

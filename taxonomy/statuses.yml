@@ -1,0 +1,30 @@
+# Lifecycle states. Exactly one per article.
+#
+# `review_after` in an article's front matter is what actually drives staleness
+# warnings; status is the human signal about how much to trust the page today.
+
+statuses:
+  - id: draft
+    title: Draft
+    description: Being written. Not trusted, excluded from retrieval exports.
+    indexed: false
+  - id: review
+    title: In review
+    description: Content complete, awaiting a reviewer. Excluded from exports.
+    indexed: false
+  - id: published
+    title: Published
+    description: Reviewed and trusted. The only status that is exported for retrieval.
+    indexed: true
+  - id: stale
+    title: Stale
+    description: >-
+      Past its review date or known to have drifted. Still exported, because a
+      dated answer beats no answer, but flagged loudly in the export metadata.
+    indexed: true
+  - id: archived
+    title: Archived
+    description: >-
+      Superseded or retired. Kept for history, never exported. Must set
+      `superseded_by` when another article replaces it.
+    indexed: false

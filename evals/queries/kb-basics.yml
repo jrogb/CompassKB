@@ -1,0 +1,35 @@
+# Queries about how the knowledge base itself works.
+#
+# Phrasings should come from real questions people asked -- a query you invented
+# tests your own vocabulary, which the article already matches.
+# See .claude/skills/retrieval-eval/SKILL.md.
+
+description: How-the-KB-works queries, asked by new contributors during onboarding.
+
+cases:
+  - query: "what are the categories in the knowledge base"
+    expect_article: how-compasskb-is-organised
+
+  - query: "why can't I just make up a new tag"
+    expect_article: how-compasskb-is-organised
+    note: "Asked whenever new_article.py rejects a tag."
+
+  - query: "how do I add a new page"
+    expect_article: adding-an-article
+
+  - query: "do I have to write the front matter by hand"
+    expect_article: adding-an-article
+
+  - query: "is this a guide or a concept page"
+    expect_article: which-category-does-this-go-in
+
+  - query: "I put the article in the wrong folder"
+    expect_articles: [which-category-does-this-go-in, how-compasskb-is-organised]
+
+  - query: "why is my draft not showing up in search"
+    expect_article: how-compasskb-is-organised
+    note: "Drafts are excluded from the retrieval export by design."
+
+  - query: "how do I delete an article"
+    expect_article: how-compasskb-is-organised
+    note: "The answer is that you don't -- you archive it."

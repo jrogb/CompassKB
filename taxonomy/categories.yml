@@ -1,0 +1,44 @@
+# Categories are the top-level shape of the knowledge base.
+# One category per article, and it MUST match the content/ subdirectory the
+# article lives in. Adding a category means adding the matching directory.
+#
+# Changing this file is a structural change: run `python3 scripts/validate.py`
+# afterwards and expect to fix articles.
+
+categories:
+  - id: concepts
+    title: Concepts
+    directory: content/concepts
+    description: >-
+      Explains what something is and why it exists. Durable, opinion-light,
+      rarely needs updating when tooling changes.
+
+  - id: guides
+    title: Guides
+    directory: content/guides
+    description: >-
+      Task-oriented walkthroughs. Has a goal, ordered steps, and a definition
+      of done. If the reader cannot tell when they have finished, it is not
+      a guide.
+
+  - id: reference
+    title: Reference
+    directory: content/reference
+    description: >-
+      Lookup material: fields, parameters, limits, schemas, glossaries.
+      Complete and scannable rather than narrative.
+
+  - id: runbooks
+    title: Runbooks
+    directory: content/runbooks
+    description: >-
+      What to do when something is on fire. Trigger, diagnosis, remediation,
+      escalation. Written to be followed under stress by someone who did not
+      write it.
+
+  - id: faq
+    title: FAQ
+    directory: content/faq
+    description: >-
+      Single question, single answer, answer first. Use when readers ask the
+      question verbatim and a full article would bury the answer.

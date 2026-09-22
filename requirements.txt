@@ -1,0 +1,4 @@
+# CompassKB tooling dependencies. Deliberately minimal -- the barrier to editing
+# a Markdown file should stay near zero.
+PyYAML>=6.0
+pytest>=7.4

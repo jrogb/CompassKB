@@ -1,0 +1,23 @@
+# Who an article is written for. At least one per article.
+# Audience drives assumed context and vocabulary, not access control.
+
+audiences:
+  - id: end-user
+    title: End user
+    description: Uses the product. Assume no internal vocabulary and no system access.
+
+  - id: support
+    title: Support
+    description: Answers user questions. Knows the product surface, not the internals.
+
+  - id: engineer
+    title: Engineer
+    description: Builds or operates the system. Internal names and code are fair game.
+
+  - id: operator
+    title: Operator
+    description: Runs the system in production. On call, wants steps not theory.
+
+  - id: internal
+    title: Internal
+    description: Staff-wide but not customer-facing. Never surfaced to external readers.
